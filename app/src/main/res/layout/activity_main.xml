@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/todays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="오늘의 총 주행거리는?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/todays"
+        app:layout_constraintTop_toBottomOf="@+id/todays" />
+
+    <TextView
+        android:id="@+id/km1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="km"
+        app:layout_constraintBottom_toBottomOf="@+id/input_km"
+        app:layout_constraintStart_toEndOf="@+id/input_km" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/input_km"
+        app:layout_constraintTop_toBottomOf="@+id/input_km">
+
+        <TextView
+            android:id="@+id/meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운행 거리 : "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/cost"
+            app:layout_constraintTop_toTopOf="@+id/meter" />
+
+        <TextView
+            android:id="@+id/km2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="km"
+            app:layout_constraintStart_toEndOf="@+id/text_km"
+            app:layout_constraintTop_toTopOf="@+id/text_km" />
+
+        <TextView
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평균 연비 : "
+            app:layout_constraintBottom_toBottomOf="@+id/text_average"
+            app:layout_constraintStart_toStartOf="@+id/meter"
+            app:layout_constraintTop_toBottomOf="@+id/meter" />
+
+        <EditText
+            android:id="@+id/text_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="13"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/cost"
+            app:layout_constraintTop_toBottomOf="@+id/meter" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="km/l"
+            app:layout_constraintBottom_toBottomOf="@+id/text_average"
+            app:layout_constraintStart_toEndOf="@+id/text_average"
+            app:layout_constraintTop_toBottomOf="@+id/text_km" />
+
+        <Button
+            android:id="@+id/average_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="수정"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_average"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/text_average" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리터당 단가 : "
+            app:layout_constraintBottom_toBottomOf="@+id/text_cost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_average" />
+
+        <EditText
+            android:id="@+id/text_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="1277"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/cost"
+            app:layout_constraintTop_toBottomOf="@+id/average_btn" />
+
+        <TextView
+            android:id="@+id/won1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            app:layout_constraintBottom_toBottomOf="@+id/text_cost"
+            app:layout_constraintStart_toEndOf="@+id/text_cost"
+            app:layout_constraintTop_toTopOf="@+id/text_cost" />
+
+        <Button
+            android:id="@+id/cost_btn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="수정"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_cost"
+            app:layout_constraintStart_toEndOf="@+id/won1"
+            app:layout_constraintTop_toBottomOf="@+id/average_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="오늘의 유류비"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/text_subcost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/won2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        app:layout_constraintStart_toEndOf="@+id/text_subcost"
+        app:layout_constraintTop_toTopOf="@+id/text_subcost" />
+
+    <TextView
+        android:id="@+id/extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="추가 유지비"
+        app:layout_constraintStart_toStartOf="@+id/text_subcost"
+        app:layout_constraintTop_toBottomOf="@+id/text_subcost" />
+
+    <EditText
+        android:id="@+id/text_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="1500"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/extra"
+        app:layout_constraintTop_toBottomOf="@+id/extra" />
+
+    <TextView
+        android:id="@+id/won3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        app:layout_constraintBottom_toBottomOf="@+id/text_extra"
+        app:layout_constraintStart_toEndOf="@+id/text_extra"
+        app:layout_constraintTop_toTopOf="@+id/text_extra" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="총 금액"
+        app:layout_constraintStart_toStartOf="@+id/extra"
+        app:layout_constraintTop_toBottomOf="@+id/text_extra" />
+
+    <TextView
+        android:id="@+id/text_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/won4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        app:layout_constraintStart_toEndOf="@+id/text_total"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/extra_btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수정"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_extra"
+        app:layout_constraintStart_toEndOf="@+id/extra"
+        app:layout_constraintTop_toTopOf="@+id/extra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
