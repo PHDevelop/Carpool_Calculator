@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DecimalFormat
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
@@ -39,8 +40,9 @@ class MainActivity : AppCompatActivity() {
                     text_km.text = input_km.text;
 
                     text_subcost.text = cal.roundToInt().toString()
+                    val numberFormat=DecimalFormat("###,###")
 
-                    text_total.text = (cal+extra).roundToInt().toString()
+                    text_total.text = numberFormat.format((cal+extra).roundToInt())
                 }
             }
         })

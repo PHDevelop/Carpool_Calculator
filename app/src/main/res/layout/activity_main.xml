@@ -165,6 +165,7 @@
         android:id="@+id/text_subcost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="0"
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -210,6 +211,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textSize="20sp"
         android:text="총 금액"
         app:layout_constraintStart_toStartOf="@+id/extra"
         app:layout_constraintTop_toBottomOf="@+id/text_extra" />
@@ -218,6 +220,7 @@
         android:id="@+id/text_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="0"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -226,6 +229,7 @@
         android:id="@+id/won4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="원"
         app:layout_constraintStart_toEndOf="@+id/text_total"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
